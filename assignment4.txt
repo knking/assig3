@@ -1,0 +1,120 @@
+Q1.Create a Class rectangle and its data members And create a member Function Which display The area of rectangle.
+ans.	  
+	package rectangle;
+		public class Rectangle {
+ 			  public static void main(String[] args){
+     				 Rectangle rectangle= new Rectangle(4,5);
+       				 rectangle.calculateArea();	
+						}
+    
+    				 double length;
+   				 double width;
+   
+    
+    			Rectangle(double length, double width){
+   				this.length=length;
+       				this.width=width;
+ 					   }
+
+    
+  			      public void calculateArea(){
+       			 System.out.println("area of rentangle= "+ length*width);
+    
+			} 
+		}
+    
+ Q2.Create a Class Complex and its data members And create a member Function Which display Complex Number       
+   ans.  	
+        package complex;
+    		 class Complex{
+      			  public static void main(String args[]){
+
+            			Complex complex= new Complex(6,7);
+         		        complex.display();
+        	
+       				 }
+        
+       				 int real,imag;
+        			 Complex( int a, int b){
+              			this.real=a;
+             			 this.imag=b;
+         			 }
+            				public void display(){
+               				 System.out.println(""+real+"+i"+imag);
+                
+           				 }
+   			 }
+
+Q3.Wap To Find the Second largest Number in array
+ ans. 
+	package largest;
+        	import java.util.Scanner;
+ 
+         	 public class Largest {
+ 
+		 public static void main(String[] args) {
+ 
+			 Scanner num=new Scanner(System.in);
+               		 System.out.println("Enter array:" );
+                
+                           int arr[]=new int[10];
+	                   int largest = arr[0];
+		 	   int secondLargest = arr[0];
+		
+				for (int i = 0; i < arr.length; i++) {
+                    
+                  		  arr[i]=num.nextInt();
+
+               					 }
+
+					for (int i = 0; i < arr.length; i++) {
+ 
+						if (arr[i] > largest) {
+						secondLargest = largest;
+						largest = arr[i];
+ 
+						}
+					 else if (arr[i] > secondLargest) {
+					secondLargest = arr[i];
+ 
+				}
+			}
+ 
+				System.out.println("Second largest number is:" + secondLargest);
+ 
+	}
+    }
+
+ Q4.Wap To Print an Array in a waveform
+ans. 
+		package waveform;
+ 			 import java.util.Scanner;
+   				 class Waveform{
+           				public static void main(String args[]){
+            				   int temp;
+        		   Scanner num=new Scanner(System.in);
+        		   System.out.print(" Enter the no.0f elements");
+       			     int n=num.nextInt();
+        		    int arr[]=new int[n];
+          		   System.out.print(" Enter the elements");
+            
+              			 for(int i=0;i<arr.length;i++){
+              				  arr[i]=num.nextInt();
+               				   int j=1;
+             				  for( i=0;i<n;i+=2){
+                   
+              					  for(;j<n;)
+               			    {
+               				    temp=arr[i];
+                  			 arr[i]=arr[j];
+                 			  arr[j]=temp;
+                 			  break;
+                   
+              				 }
+            			  j+=2; 
+          		 }
+              	 for( i=0;i<n;i++)
+           	 System.out.print( " "+arr[i]);
+         	  }
+           }
+    }
