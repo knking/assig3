@@ -1,4 +1,4 @@
-Q1.Create a Class rectangle and its data members And create a member Function Which display The area of rectangle.
+ Q1.Create a Class rectangle and its data members And create a member Function Which display The area of rectangle.
 ans.	  
 	package rectangle;
 		public class Rectangle {
@@ -36,7 +36,7 @@ ans.
         
        				 int real,imag;
         			 Complex( int a, int b){
-              			this.real=a;
+              			 this.real=a;
              			 this.imag=b;
          			 }
             				public void display(){
@@ -62,7 +62,7 @@ Q3.Wap To Find the Second largest Number in array
 		 	   int secondLargest = arr[0];
 		
 				for (int i = 0; i < arr.length; i++) {
-                    
+                     
                   		  arr[i]=num.nextInt();
 
                					 }
