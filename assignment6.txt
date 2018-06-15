@@ -1,0 +1,32 @@
+Q1.Create an Interface and its methods
+ans.
+ 	package animal1;
+
+
+		public interface Animal {
+
+		  public void speak();
+ 		 public void eat(); 
+    
+        
+ 	   }
+        
+    	package animal1;
+
+
+		public class Cat implements Animal {
+		    public void speak(){
+      			  System.out.println(" I AM A CAT");
+    		}
+            
+    		 public void eat(){
+       		  System.out.println("I EAT RAT");
+   	  }
+             
+   			 public static void main(String args[]){
+     			   Cat cat=new Cat();
+     			   cat.speak();
+      			  cat.eat();
+    		}
+	}
+   
