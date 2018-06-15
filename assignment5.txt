@@ -68,8 +68,36 @@ program
              
 }
 
+Q3.Overload Print function
+ans.
+	package functionoverloading;
 
-	
+         public class FunctionOverloading {
+        
+           public void display()
+        {
+            System.out.println("Null Value");
+        }
+           public void display(int K)
+        {
+            System.out.println("Int Value "+K);
+        } 
+       public void display(float N)
+        {
+            System.out.println("Float Value "+N);
+        }
+             public static void main(String[] args) 
+       {
+        int K=8;
+        float N=(float) 3.5;
+        FunctionOverloading over=new FunctionOverloading();
+        over.display();
+        over.display(K);
+        over.display(N);
+        
+    }
+    
+}
 
 
 
