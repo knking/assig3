@@ -137,44 +137,35 @@ ans.
 
 Q6. find sorted array
 
+ans. 	
+	
 
 
+	package arraysort;
+		public class ArraySort {
 
+    public static void main(String[] args)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	{
+    int arr[]={1,1,1,1,0,0,1,0},temp,i=0;
+          for(int j=0;j<arr.length;j++)
+          {
+            if(arr[j]==0)
+            {
+              temp=arr[i];
+              arr[i]=arr[j];
+              arr[j]=temp;
+              i++;
+            }
+          }
+          System.out.println("The Sorted array is");
+          for(int k=0;k<arr.length;k++)
+          {
+            System.out.print(arr[k]+" ");
+          }
+    }
+    
+}
 
 Q7. search a number in given aray 
   ans.   	
