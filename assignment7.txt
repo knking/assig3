@@ -16,27 +16,30 @@ package reversestring;
 }
 
 Q2. Write a Java program to generate all substrings of the string xyz.
-program 
-	package substring;
+program :
+		package substring;
 
-public class Substring {
-    public static void creatsubstring(String fir,  int n){
-        for( int i=0;i<=n;i++){
-            for (int j=i+1;j<=n;j++){
-                System.out.println(fir.substring(i,j));
-            }
-        }
-        
-    }
-
-    public static void main(String[] args) {
-        String fir="xyz";
-        System.out.println("The string is = "+fir);
-        creatsubstring(fir,fir.length());
+public class SubString 
+{   
+    public static void main(String[] args) 
+    {
+      int i, j;
+      String str="xyz";
       
+      System.out.println("String is:"+str);
+       
+      for (j=0; j<str.length(); j++)
+      {
+         for(i = 1; i<= str.length()-j; i++)
+         {
+          
+            System.out.println(str.substring(j, j+i));
+         }
+      }
     }
-    
 }
+	
+
 
 Q3. Write a Java program to remove all vowels from the String.
 program 
@@ -62,25 +65,22 @@ abc
 program 
 	package patternstring;
 public class Patternstring {
-    public static void main(String[] args) {
-       
-        
-        for(int i=0;i<=3;i++){
-           char ch =97;
-            for (int j=0;j<=i;j++){
-                
-                System.out.print(ch);
-                
-                ch++;
-               
+        public static void main(String args[]){
+        for(int i=1;i<=3;i++){
+            char ch=97;
+            for( int space=4;space>=i;space--){ 
+                System.out.print(" ");
             }
-            System.out.println();
-                
+                for(int j=1;j<=i;j++){ 
+                    System.out.print(" "+ch);
+                    ch++;
+                }
+                System.out.println();
+            }
         }
-        
-       
-    }
+}
 
+		
 Q5. Write a Java program to check occurrence of a string in another string, where both strings are taken as input from the user.
 program 
 	package occurance;
