@@ -48,8 +48,40 @@ ans.
        		 dog.eat();
     		}
 	}
+Q2.Create an Abstract Class with variables and abstract method
+ ans.
+	package abstract1;
+abstract class Animal 
+{
+    String color="black";
+    String breed="xyz";
+    String name="abc";
+    public abstract void eat();
+    public void speak()
+    {
+         System.out.println("speaks");
+    }
+}
 
-Q2.convert string into Integers
+package abstract1;
+
+public class Dog extends Animal {
+  public void eat()
+  {
+      System.out.println("dog eats");
+  }
+  public static void main(String args[])
+  {
+      Animal obj=new Dog();
+      obj.eat();
+      obj.speak();
+      
+  }
+        
+
+
+
+Q3.convert string into Integers
  ans
    	package sum;
 
