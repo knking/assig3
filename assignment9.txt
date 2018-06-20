@@ -1,0 +1,25 @@
+Q1.Use the text file and write its contents in another file
+ans.
+ 	
+    package handling;
+	import java.io.*;
+
+		public class filehandling {
+  		  public static void main(String[] args)  throws IOException
+    		{
+    		  File file1= new File("F:\\K1.txt");
+    		  File file2= new File("F:\\K2.txt");
+      
+    			  FileReader in = new FileReader(file1);
+      
+    			  FileWriter out=new FileWriter(file2);
+      
+    		  int c;
+  		    while((c=in.read()) != -1){
+    			    out.write((char)c);
+      		 }
+    		  in.close();
+    		  out.close();
+ 		 }
+
+	}
