@@ -1,13 +1,18 @@
-Q1.Use the text file and write its contents in another file
+
+Q1.Use the text file abc.txt and write its contents in another file xyz.txt. Print the contents of xyz.txt for verification.
 ans.
  	
-    package handling;
-	import java.io.*;
+   
+package handling;
+import java.io.*;
 
-		public class filehandling {
-  		  public static void main(String[] args)  throws IOException
-    		{
-    		  File file1= new File("F:\\K1.txt");
+public class Handling {
+
+    
+    public static void main(String[] args) throws IOException
+    {
+        
+         File file1= new File("F:\\K1.txt");
     		  File file2= new File("F:\\K2.txt");
       
     			  FileReader in = new FileReader(file1);
@@ -20,6 +25,17 @@ ans.
       		 }
     		  in.close();
     		  out.close();
+                  FileReader obj=new FileReader(file2);
+                  int k;
+                  while((k=obj.read()) != -1){
+    			    System.out.print((char)k);
+      		 }
+                  obj.close();
  		 }
 
 	}
+
+        
+    
+    
+
