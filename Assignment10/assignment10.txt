@@ -1,0 +1,40 @@
+Q1.Create a Dynamic Array Data Structure that performs all the actions of the ArrayList. It should create the new array of size 1.5 times the previous size
+
+
+     
+         package self;
+
+		import java.util. *;
+
+		   import java.lang.reflect.Field;
+
+		      public class dynamicAray extends ArrayList  
+                {
+      			ArrayList newfile;
+     			int size;
+    				dynamicAray (int Size) throws Exception{
+        			this.size=size;
+				newfile=new ArrayList(Size);
+				newfile.add(1);
+					System.out.println(getCapacity(newfile));
+				newfile.ensureCapacity(2*Size);
+					System.out.println(getCapacity(newfile));
+  		  }
+    				static int getCapacity(ArrayList a1) throws Exception
+
+    			{
+        			Field field = ArrayList.class.getDeclaredField("elementData");
+     				   field.setAccessible(true);
+     					   int capacity =((Object[])field.get(a1)).length;
+     			   return capacity;
+ 		   }
+	   }
+ 
+        class Verify 
+         {
+        public static void main(String args[]) throws Exception
+       {
+        dynamicAray file=new dynamicAray(8);
+          
+        }
+    }
