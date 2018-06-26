@@ -1,0 +1,24 @@
+Q1.Create a multi-threaded program with a synchronised method to print values from 1 to 1000 using 2 threads.
+ ans.
+	 package self;
+
+		public class ThreadExample extends Thread {
+    
+   		 public static void main( String [] args){
+     		   Thread thread1=new Thread(new ThreadExample());
+      		  Thread thread2=new Thread();
+        
+      		  thread1.start();
+      		  thread2.start();
+      
+        
+   		 }
+        
+     			   public synchronized void run(){
+           			 for(int i=0;i<1000;i++){
+            			    System.out.println(i);
+                        
+      		      }
+            
+      		S  }
+    }
