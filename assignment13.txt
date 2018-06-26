@@ -20,5 +20,5 @@ Q1.Create a multi-threaded program with a synchronised method to print values fr
                         
       		      }
             
-      		S  }
+      		  }
     }
