@@ -1,0 +1,171 @@
+Q1.Create a program to input a Date from the user in dd/mm/yyyy format and print it in English.
+ans.
+
+
+
+
+
+Q2.Create a generic Sorting function that can sort any type of array (primitive types).
+ans.
+	
+	package self;
+
+          
+          import static java.util.Arrays.sort;
+ 
+         public class GenericSortingFunction 
+     {
+
+    
+        static <T> void print(T arr[])
+    {
+        for (T knr : arr)
+        {
+            System.out.print(" "+knr);
+         }
+     }
+    
+        public static void main(String args[])
+      {
+        String arr1[]={"Krishna","Mukund","Ashu","Anshu","Gupta"};
+
+     
+        Double arr2[]={9.2,7.3,4.9,1.8,7.6,5.5};
+         
+        Integer arr3[]={7,4,5,2,6,9,1};
+
+        
+        System.out.println("String Array After Sorting");
+          sort(arr1);
+       print(arr1);
+        
+
+        
+        System.out.println("\nDouble Array after Sorting");
+        sort(arr2);
+        print(arr2);
+      
+        System.out.println("\nInteger Array after Sorting");
+        sort(arr3);
+        print(arr3);
+    }
+
+    
+}
+
+Q3.Create a generic print function that can print all types of arrays (primitive types)
+ ans.	package self;
+
+    import java.util.Collections;
+
+
+     public class PrintArray {
+    
+    
+   static  <T> void arrayprint(T arr[]){
+        for(T knr:arr){
+            System.out.print(""+knr);
+    }
+   }
+
+   public static void main(String[]args){
+
+   Character arr1[]={'A', 'C', 'E', 'K', 'N', 'R', 'Z'};
+    Integer arr2[]={2,3,5,6,7,8,10,14,20,13};
+    arrayprint(arr1);
+    System.out.println();
+  arrayprint(arr2);
+
+
+    }
+  }
+
+
+Q4.Write a java program that sorts the list on the basis of age and name.	
+ans.
+		package self;
+
+import java.util.*;
+public class Person implements Comparable<Person>{
+    int age;
+    String name;
+    
+    Person(String name,int age){
+        this.name=name;
+        this.age=age;
+       
+         
+    }
+
+    public String getName() {
+        return name;
+    }
+    public int getAge() {
+        return age;
+    }
+   @Override
+    public int compareTo(Person t) {
+        return this.age-t.age;
+    }
+    
+    
+    public static void main(String[] args){
+        Person name1=new Person("KRISHNA",20);
+         Person name2=new Person("MUKUND",21);
+          Person name3=new Person("ASHUTOSH",23);
+           Person name4=new Person("SONU",99);
+            Person name5=new Person("RAJ",25);
+             Person name6=new Person("GURPREET",40);
+              Person name7=new Person("PARVEH",30);
+               Person name8=new Person("MURARI",19);
+        
+        ArrayList<Person> arr=new <Person>ArrayList();
+        arr.add(name1);
+         arr.add(name2);
+          arr.add(name3);
+           arr.add(name4);
+            arr.add(name5);
+             arr.add(name6);
+              arr.add(name7);
+               arr.add(name8);
+               
+               Person1 compare=new Person1();
+               Collections.sort(arr,compare);
+               System.out.println("Sort According To Name");
+               for(Person namex : arr){
+                  
+                  System.out.println(namex.getName()+" "+namex.getAge());
+               }
+                  
+               
+                Collections.sort(arr);
+                
+                System.out.println("Sort According To Age");
+              for(Person namex : arr){
+                  
+                  System.out.println(namex.getName()+" "+namex.getAge());
+                  
+                   
+               }
+        
+            
+    }
+
+    
+    }
+             //here new class is define for comparator
+                        
+                      package self;
+
+           	import java.util.Comparator;
+
+			public class Person1 implements Comparator<Person>
+		{
+		@Override
+   		 public int compare(Person t, Person t1) {
+     		   return t.getName().compareTo(t1.getName());
+   		 }
+    
+	}
+
+            
