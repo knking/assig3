@@ -1,5 +1,126 @@
 Q1.Create a program to input a Date from the user in dd/mm/yyyy format and print it in English.
-ans.
+ans. 	package self;
+            import java.util.*;
+
+             public class Dateconversion {
+   
+	public static HashMap<String, String> getDate = new HashMap();
+	public static void getData() {
+		getDate.put("01", "First");
+		 getDate.put("02", "Second");
+		  getDate.put("03", "Third");
+		   getDate.put("04", "Fourth");
+		   getDate.put("05", "Fifth");
+		    getDate.put("06", "Sixth");
+		     getDate.put("07", "Seventh");
+		      getDate.put("08", "Eighth");
+		      getDate.put("09", "Nineth");
+		       getDate.put("10", "Tenth");
+		getDate.put("11", "Eleventh");
+		getDate.put("12", "Tweleveth");
+		getDate.put("13", "Thirteenth");
+		getDate.put("14", "Fourteenth");
+		getDate.put("15", "Fifteenth");
+		getDate.put("16", "Sixteenth");
+		getDate.put("17", "Seventeenth");
+		getDate.put("18", "Eighteenth");
+		getDate.put("19", "Nineteenth");
+		getDate.put("20", "Twenty");
+		getDate.put("21", "Twenty First");
+		getDate.put("22", "Twenty Second");
+		getDate.put("23", "Twenty Third");
+		getDate.put("24", "Twenty Fourth");
+		getDate.put("25", "Twent Fifth");
+		getDate.put("26", "Twenty Sixth");
+		getDate.put("27", "Twenty Seventh");
+		getDate.put("28", "Twenty Eighth");
+		getDate.put("29", "Twenty Nineth");
+		getDate.put("30", "Thirty");
+		getDate.put("31", "Thirty First");
+        }
+       
+                
+public static HashMap<String, String> getMonth = new HashMap();
+ public static void getMon(){
+		getMonth.put("01", "January");
+		getMonth.put("02", "February");
+		getMonth.put("03", "March");
+		getMonth.put("04", "April");
+		getMonth.put("05", "May");
+		getMonth.put("06", "June");
+		getMonth.put("07", "July");
+		getMonth.put("08", "August");
+		getMonth.put("09", "September");
+		getMonth.put("10", "October");
+		getMonth.put("11", "November");
+		getMonth.put("12", "December");
+ }
+public static HashMap<String, String> getLeftYear = new HashMap();
+ public static void getLyear(){
+		getLeftYear.put("07", "Seven");
+		getLeftYear.put("08", "Eight");
+		getLeftYear.put("09", "Nine");
+		getLeftYear.put("10", "Ten");
+		getLeftYear.put("11", "Eleven");
+		getLeftYear.put("12", "Tweleve");
+		getLeftYear.put("13", "Thirteen");
+		getLeftYear.put("14", "Fourteen");
+		getLeftYear.put("15", "Fifteen");
+		getLeftYear.put("16", "Sixteen");
+		getLeftYear.put("17", "Seventeen");
+		getLeftYear.put("18", "Eighteen");
+		getLeftYear.put("19", "Nineteen");
+		getLeftYear.put("20", "Twenty");
+		getLeftYear.put("21", "Twenty One");
+		getLeftYear.put("22", "Twenty Two");
+ }
+public static HashMap<String, String> getRightYear = new HashMap();
+
+public static void getRyear(){
+		getRightYear.put("00", "Hundred");
+		getRightYear.put("10", "Ten");
+		getRightYear.put("20", "Twenty");
+		getRightYear.put("30", "Thirty");
+		getRightYear.put("40", "Forty");
+		getRightYear.put("50", "Fifty");
+		getRightYear.put("60", "Sixty");
+		getRightYear.put("70", "Seventy");
+		getRightYear.put("80", "Eighty");
+		getRightYear.put("90", "Ninety");
+                getRightYear.put("91", "Ninety One");
+                getRightYear.put("92", "Ninety Two");
+                getRightYear.put("93", "Ninety Three");
+                getRightYear.put("98", "Ninety Eight");
+                getRightYear.put("99", "Ninety Nine");
+                getRightYear.put("97", "Ninety SEVEN");
+                getRightYear.put("96", "Ninety six");
+                getRightYear.put("95", "Ninety five");
+                getRightYear.put("94", "Ninety four");
+	}
+
+	public static String convert(String dateInput) {
+		String dat = dateInput.substring(0, 2);
+		String mnth = dateInput.substring(3, 5);
+		String yrLeft = dateInput.substring(6, 8);
+		String yrRight = dateInput.substring(8, 10);
+		return getDate.get(dat) + " " + getMonth.get(mnth) + " " + getLeftYear.get(yrLeft) + " " + getRightYear.get(yrRight);
+	}
+
+	public static void main(String args[]) {
+
+		getData();
+                getMon();
+                getLyear();
+                getRyear();
+                Scanner input=new Scanner(System.in);
+                System.out.println("Enter Date");
+                String knr=input.next();
+		System.out.println(convert(knr));
+
+
+	}
+}
+  
 
 
 
