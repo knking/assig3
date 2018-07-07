@@ -1,0 +1,73 @@
+Q1.Create an Interface and its methods
+ans.
+ 	package animal1;
+
+
+		public interface Animal {
+
+		  public void speak();
+ 		 public void eat(); 
+    
+        
+ 	   }
+        
+    	package animal1;
+
+
+		public class Cat implements Animal {
+		    public void speak(){
+      			  System.out.println(" I AM A CAT");
+    		}
+            
+    		 public void eat(){
+       		  System.out.println("I EAT RAT");
+   	  }
+             
+   			 public static void main(String args[]){
+     			   Cat cat=new Cat();
+     			   cat.speak();
+      			  cat.eat();
+    		}
+	}
+   
+		
+              package animal1;
+
+		public class Dog implements Animal {
+   		 public void speak(){
+       		 System.out.println(" I AM A DOG");
+   		 }
+            
+     			public void eat(){
+       			  System.out.println("I EAT PEDIGREE");
+    		 }
+             
+   		 public static void main(String args[]){
+       		 Dog dog=new Dog();
+       		 dog.speak();
+       		 dog.eat();
+    		}
+	}
+
+Q2.convert string into Integers
+ ans
+   	package sum;
+
+		public class Sum {
+
+   
+   		 public static void main(String[] args) {
+    		   int a=Integer.parseInt(args[0]);
+     		   int b=Integer.parseInt(args[1]);
+     	   if( a>b)
+      		  System.out.println("greater is="+a);
+        
+         else
+          	  System.out.println("Greater is"+b);
+                
+        
+    }
+    
+}
+
+

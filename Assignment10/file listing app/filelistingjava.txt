@@ -1,0 +1,98 @@
+package filelisting;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+ class filelisting {
+     
+    static String viewIndex = null;
+    static String  dispIndex = null;
+    static ArrayList collect = new ArrayList();
+              public static void main(String[] args) throws IOException {
+                 File knr= new File("C:\\Users\\krish\\OneDrive\\Desktop\\ABC.txt");
+                   boolean check=knr.isFile();
+                     System.out.println(check);
+         
+  try
+  {
+     FileReader in = new FileReader(knr);
+       BufferedReader br=new BufferedReader(in);
+
+          for (int i=0;i<2;i++)
+          {
+              if(i==0)
+              {
+                   viewIndex = br.readLine();
+              }
+              else
+              {
+                  dispIndex = br.readLine();
+             
+              }
+
+          }
+          {
+           File file = new File(viewIndex);
+
+        if(file.exists() && file.isDirectory()) 
+        {
+                File arr[]=file.listFiles(); 
+            display(arr, 0, 0);
+        }
+        System.out.println(collect);
+                 }
+     {
+           File newfile = new File( dispIndex);
+           FileWriter write =new FileWriter(newfile);
+       try{       
+          Iterator<String> iter=collect.iterator();
+          while(iter.hasNext())
+          {
+          String value=iter.next();
+          write.write(value);
+         
+          }
+        //System.out.println(value);
+        
+          write.close();
+          
+          //System.out.println();
+            
+          
+            
+  }
+        
+  catch(IOException e){
+      e.printStackTrace();
+      
+  }
+     }
+  }
+  
+  catch(IOException e){
+      e.printStackTrace();
+    }
+    }
+            
+  
+
+    static void display( File[] array,int index,int count){
+        
+      if(index == array.length)
+        return;
+        for(int i=0;i<count;i++)
+           collect.add(" "); 
+        
+            if(array[index].isFile())
+            {
+               collect.add(array[index].getAbsolutePath() ); 
+            }
+            else if(array[index].isDirectory())
+            {
+                collect.add(array[index].getAbsolutePath()); 
+                 display(array[index].listFiles(), 0, count+ 1);
+            }
+            display(array, ++index, count);
+    }
+  
+    
+}     

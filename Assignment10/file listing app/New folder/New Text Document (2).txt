@@ -1,0 +1,12 @@
+Make a class Student,
+Which allows:
+User to
+-Add student details(name class age marks)
+- Delete Student
+- Print percentage
+
+
+
+
+
+Isme bs ek class bnegi jisme 3 functions honge add , delete, print and ek main function b hoga jaha iska object bnega.
